@@ -6,17 +6,17 @@ const goodThingsData = [
   {
     title: "Efficient task management",
     description: "Organize your daily job enhance your life performance",
-    image: "/src/assets/image.png",
+    image: "/assets/Image.png", // Alterei o caminho para o diretório public/assets
   },
   {
     title: "Keep track of your priorities",
     description: "Mark one activity as done makes your brain understands the power of doing.",
-    image: "/src/assets/image (1).png",
+    image: "/assets/Image (1).png", // Alterei o caminho para o diretório public/assets
   },
   {
     title: "Achieve your goals faster",
     description: "Careful with misunderstandings the difference between a list and a list of desires.",
-    image: "/src/assets/image (2).png",
+    image: "/assets/Image (2).png", // Alterei o caminho para o diretório public/assets
   },
 ];
 
@@ -29,7 +29,11 @@ function GoodThings() {
       <Container sx={{ display: 'flex', justifyContent: 'center', gap: 2, marginTop: 2 }}>
         {goodThingsData.map((item, index) => (
           <Card key={index} sx={{ maxWidth: 300, borderRadius: 3, boxShadow: 3 }}>
-            <img src={item.image} alt="Icon" style={{ width: '100%', height: 'auto', borderRadius: '8px 8px 0 0' }} />
+            <img
+              src={item.image}
+              alt="Icon"
+              style={{ width: '100%', height: 'auto', borderRadius: '8px 8px 0 0' }}
+            />
             <CardContent>
               <Typography variant="h6" gutterBottom>
                 {item.title}

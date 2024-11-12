@@ -5,7 +5,6 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import LoginImage from '../assets/Login.png';
 
 const Login = () => {
   const [isSignUp, setIsSignUp] = useState(false); // Estado para alternar entre login e cadastro
@@ -23,7 +22,6 @@ const Login = () => {
   const toggleSignUp = () => {
     setIsSignUp(!isSignUp); // Alterna entre login e cadastro
     setError(''); // Limpa qualquer mensagem de erro ao alternar
-    // Limpar campos quando alternar entre login e cadastro
     setUsername('');
     setEmail('');
     setPassword('');
@@ -34,7 +32,6 @@ const Login = () => {
     e.preventDefault();
     setLoading(true); // Inicia o carregamento
 
-    // Validação de entrada no frontend
     if (isSignUp) {
       if (!email.includes('@')) {
         setError("Invalid email format.");
@@ -55,8 +52,8 @@ const Login = () => {
 
     try {
       const apiUrl = isSignUp
-        ? 'http://localhost:5000/auth/signup' // Rota para o cadastro
-        : 'http://localhost:5000/auth/login'; // Rota para o login
+        ? 'http://localhost:5000/auth/signup'
+        : 'http://localhost:5000/auth/login';
 
       const response = await axios.post(apiUrl, {
         username,
@@ -116,7 +113,7 @@ const Login = () => {
 
       <Box sx={{ mb: 2 }}>
         <LogoImage
-          src={LoginImage}
+          src="/assets/Login.png" // Caminho atualizado da imagem
           alt="Login Logo"
           style={{
             width: '150px',

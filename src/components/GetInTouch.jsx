@@ -37,7 +37,7 @@ function GetInTouch() {
       <Container maxWidth="xs" sx={{ position: 'relative', borderRadius: 2, boxShadow: 3, padding: 4, backgroundColor: '#ffffff' }}>
         <Avatar
           alt="User Avatar"
-          src="/src/assets/tatiana.png"
+          src="/assets/tatiana.png"
           sx={{ width: 80, height: 80, position: 'absolute', top: '-40px', left: '50%', transform: 'translateX(-50%)' }}
         />
         
