@@ -1,0 +1,156 @@
+/* Layout geral */
+.home-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  background-color: #f0f0f0;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Colunas To-do e Done */
+.task-column {
+  width: 380px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid;
+  transition: box-shadow 0.3s ease;
+}
+
+.task-column:hover {
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.todo-column {
+  border-color: #ff9800;
+}
+
+.done-column {
+  border-color: #4caf50;
+}
+
+/* Cabeçalho das seções */
+.task-column h4 {
+  font-size: 1.5em;
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.task-column p {
+  color: #666;
+  font-size: 0.9em;
+  margin: 10px 0 20px;
+}
+
+/* Lista de tarefas */
+.task-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos dos itens da lista */
+.task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  font-size: 1em;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+/* Adicionando efeito de hover para as tarefas */
+.task-list li:hover {
+  background-color: #fafafa;
+}
+
+/* Estilo das caixas de seleção */
+.task-list li input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 2px solid #ff9800; /* Borda laranja para as tarefas To-do */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Caixa de seleção quando marcada */
+.todo-column .task-list li input[type="checkbox"]:checked {
+  background-color: #ff9800;
+}
+
+.done-column .task-list li input[type="checkbox"] {
+  border: 2px solid #4caf50; /* Borda verde para a seção Done */
+  background-color: white;
+  position: relative; /* Para posicionar o verificado dentro */
+}
+
+/* Sinal de verificado na checkbox quando marcada */
+.done-column .task-list li input[type="checkbox"]:checked::before {
+  content: "✔"; /* Símbolo de verificado */
+  color: #4caf50;
+  font-size: 16px;
+  position: absolute;
+  top: -2px;
+  left: 4px; /* Ajuste para centralizar o "✔" dentro da checkbox */
+}
+
+/* Estilos para itens concluídos */
+.done-column .task-list li {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Botão de deletar item */
+.task-list li .delete {
+  font-size: 0.8em;
+  color: #999;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.task-list li .delete:hover {
+  color: #ff0000;
+}
+
+/* Botão Erase All */
+.erase-button {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.erase-button:hover {
+  background-color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+  }
+  .task-column {
+    width: 100%;
+  }
+}
