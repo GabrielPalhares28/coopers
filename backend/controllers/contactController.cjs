@@ -9,7 +9,7 @@ export const contactController = async (req, res) => {
   }
 
   try {
-    // Configurar o nodemailer
+   
     const transporter = nodemailer.createTransport({
       service: 'Gmail',
       auth: {
@@ -18,7 +18,7 @@ export const contactController = async (req, res) => {
       },
     });
 
-    // Configurar o conteúdo do e-mail
+    
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: 'destino@example.com',
@@ -26,7 +26,7 @@ export const contactController = async (req, res) => {
       text: `Nome: ${name}\nE-mail: ${email}\nTelefone: ${telephone}\nMensagem: ${message}`,
     };
 
-    // Enviar o e-mail
+    
     await transporter.sendMail(mailOptions);
     res.status(200).json({ message: 'Contato enviado com sucesso!' });
   } catch (error) {

@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-/* Colunas To-do e Done */
+
 .task-column {
   width: 380px;
   background: white;
@@ -32,7 +32,7 @@
   border-color: #4caf50;
 }
 
-/* Cabeçalho das seções */
+
 .task-column h4 {
   font-size: 1.5em;
   margin: 0;
@@ -46,14 +46,14 @@
   margin: 10px 0 20px;
 }
 
-/* Lista de tarefas */
+
 .task-list {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-/* Estilos dos itens da lista */
+
 .task-list li {
   display: flex;
   align-items: center;
@@ -66,12 +66,12 @@
   transition: background-color 0.3s ease;
 }
 
-/* Adicionando efeito de hover para as tarefas */
+
 .task-list li:hover {
   background-color: #fafafa;
 }
 
-/* Estilo das caixas de seleção */
+
 .task-list li input[type="checkbox"] {
   appearance: none;
   width: 20px;
@@ -79,38 +79,38 @@
   border-radius: 50%;
   margin-right: 10px;
   cursor: pointer;
-  border: 2px solid #ff9800; /* Borda laranja para as tarefas To-do */
+  border: 2px solid #ff9800; 
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Caixa de seleção quando marcada */
+
 .todo-column .task-list li input[type="checkbox"]:checked {
   background-color: #ff9800;
 }
 
 .done-column .task-list li input[type="checkbox"] {
-  border: 2px solid #4caf50; /* Borda verde para a seção Done */
+  border: 2px solid #4caf50; 
   background-color: white;
-  position: relative; /* Para posicionar o verificado dentro */
+  position: relative; 
 }
 
-/* Sinal de verificado na checkbox quando marcada */
+
 .done-column .task-list li input[type="checkbox"]:checked::before {
-  content: "✔"; /* Símbolo de verificado */
+  content: "✔"; 
   color: #4caf50;
   font-size: 16px;
   position: absolute;
   top: -2px;
-  left: 4px; /* Ajuste para centralizar o "✔" dentro da checkbox */
+  left: 4px; 
 }
 
-/* Estilos para itens concluídos */
+
 .done-column .task-list li {
   text-decoration: line-through;
   color: #999;
 }
 
-/* Botão de deletar item */
+
 .task-list li .delete {
   font-size: 0.8em;
   color: #999;
@@ -125,7 +125,7 @@
   color: #ff0000;
 }
 
-/* Botão Erase All */
+
 .erase-button {
   background-color: #000;
   color: white;
@@ -145,7 +145,7 @@
   background-color: #333;
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
   .home-container {
     flex-direction: column;

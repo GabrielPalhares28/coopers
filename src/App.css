@@ -1,9 +1,9 @@
 #root {
-  width: 1440px; /* Define a largura conforme solicitado */
-  height: 3854px; /* Define a altura conforme solicitado */
-  position: relative; /* Permite o uso de propriedades 'top' e 'left' */
-  top: -513px; /* Ajusta a posição vertical */
-  left: -721px; /* Ajusta a posição horizontal */
+  width: 1440px; 
+  height: 3854px; 
+  position: relative; 
+  top: -513px;  
+  left: -721px; 
   padding: 2rem;
   text-align: center;
 }

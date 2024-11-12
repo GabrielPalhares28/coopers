@@ -6,17 +6,17 @@ const goodThingsData = [
   {
     title: "Efficient task management",
     description: "Organize your daily job enhance your life performance",
-    image: "/assets/Image.png", // Alterei o caminho para o diretório public/assets
+    image: "/assets/Image.png", 
   },
   {
     title: "Keep track of your priorities",
     description: "Mark one activity as done makes your brain understands the power of doing.",
-    image: "/assets/Image (1).png", // Alterei o caminho para o diretório public/assets
+    image: "/assets/Image (1).png", 
   },
   {
     title: "Achieve your goals faster",
     description: "Careful with misunderstandings the difference between a list and a list of desires.",
-    image: "/assets/Image (2).png", // Alterei o caminho para o diretório public/assets
+    image: "/assets/Image (2).png", 
   },
 ];
 

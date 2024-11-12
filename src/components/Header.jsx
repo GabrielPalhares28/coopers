@@ -4,13 +4,13 @@ import logo from '../assets/Logo.png';
 import backgroundGreen from '../assets/BG.png';
 import officeImage from '../assets/foto.png';
 import bgImage from '../assets/BG1.png';
-import Login from './Login'; // Importa o componente de login
+import Login from './Login'; 
 
 function Header() {
-  // Estado para controlar a visibilidade do modal de login
+  
   const [openLoginModal, setOpenLoginModal] = useState(false);
 
-  // Funções para abrir e fechar o modal
+  
   const handleOpenLoginModal = () => setOpenLoginModal(true);
   const handleCloseLoginModal = () => setOpenLoginModal(false);
 

@@ -31,7 +31,7 @@ const ToDoList = () => {
   const handleTaskToggle = (taskId) => {
     setTasks(tasks.map(task => {
       if (task.id === taskId) {
-        return { ...task, done: !task.done }; // Toggle the 'done' status
+        return { ...task, done: !task.done }; 
       }
       return task;
     }));
@@ -53,7 +53,7 @@ const ToDoList = () => {
   const handleSaveEdit = () => {
     setTasks(tasks.map(task => {
       if (task.id === editingTaskId) {
-        return { ...task, text: editingText }; // Update the task text
+        return { ...task, text: editingText }; 
       }
       return task;
     }));
@@ -81,7 +81,7 @@ const ToDoList = () => {
                   type="text"
                   value={editingText}
                   onChange={(e) => setEditingText(e.target.value)}
-                  onBlur={handleSaveEdit} // Save when the input loses focus
+                  onBlur={handleSaveEdit} 
                   autoFocus
                 />
               ) : (

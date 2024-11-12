@@ -17,7 +17,7 @@ exports.createTask = async (req, res) => {
   try {
     const { text } = req.body;
     
-    // Validação simples: verificar se o campo 'text' não está vazio
+    
     if (!text || typeof text !== 'string' || text.trim().length === 0) {
       return res.status(400).json({ error: 'Task text is required' });
     }
@@ -38,7 +38,7 @@ exports.updateTask = async (req, res) => {
     const task = await Task.findByPk(id);
     if (!task) return res.status(404).json({ error: 'Task not found' });
 
-    // Atualizar apenas os campos fornecidos
+    
     task.text = text ?? task.text;
     task.done = done ?? task.done;
     await task.save();

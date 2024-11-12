@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Box, Container, Typography, TextField, Button, Avatar } from '@mui/material';
-import Vector from '/src/assets/Vector.png'; // Certifique-se de que este caminho para a imagem está correto
+import Vector from '/src/assets/Vector.png'; 
 import axios from 'axios';
 
 function GetInTouch() {
-  // Estados para armazenar os dados do formulário
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -14,19 +14,19 @@ function GetInTouch() {
 
   const [responseMessage, setResponseMessage] = useState('');
 
-  // Função para atualizar o estado do formulário
+  
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Função para manipular o envio do formulário
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       const response = await axios.post('http://localhost:5000/contact', formData);
       setResponseMessage('Message sent successfully');
-      setFormData({ name: '', email: '', telephone: '', message: '' }); // Limpa o formulário
+      setFormData({ name: '', email: '', telephone: '', message: '' }); 
     } catch (error) {
       setResponseMessage('Failed to send message');
     }
