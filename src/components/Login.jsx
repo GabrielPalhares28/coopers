@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import LogoImage from '../assets/LogoImage';
+import LogoImage from '/assets/Login.png'; 
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
@@ -112,14 +112,15 @@ const Login = () => {
       </Button>
 
       <Box sx={{ mb: 2 }}>
-        <LogoImage
-          src="/assets/Login.png" // Caminho atualizado da imagem
-          alt="Login Logo"
-          style={{
-            width: '150px',
-            height: '150px',
-          }}
-        />
+      <LogoImage
+        src="/assets/Logo.png" // Caminho correto ajustado
+         alt="Login Logo"
+         style={{
+        width: '150px',
+        height: '150px',
+  }}
+/>
+
       </Box>
 
       <Box sx={{ textAlign: 'left', mb: 3, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '2rem' }}>
