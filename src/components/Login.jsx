@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import LogoImage from '/assets/Login.png'; 
+import LogoImage from '/assets/Login.png'; // Certifique-se de que este caminho está correto
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
@@ -13,7 +13,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false); // Adicionado para controle de carregamento
+  const [loading, setLoading] = useState(false); // Controle de carregamento
 
   const handleClose = () => {
     window.close(); // Pode ser problemático dependendo do contexto do navegador
@@ -45,7 +45,7 @@ const Login = () => {
       }
       if (password !== confirmPassword) {
         setError("Passwords do not match.");
-        setLoading(false); // Finaliza o carregamento
+        setLoading(false);
         return;
       }
     }
@@ -112,18 +112,26 @@ const Login = () => {
       </Button>
 
       <Box sx={{ mb: 2 }}>
-      <LogoImage
-        src="/assets/Logo.png" // Caminho correto ajustado
-         alt="Login Logo"
-         style={{
-        width: '150px',
-        height: '150px',
-  }}
-/>
-
+        <img
+          src={LogoImage} // Corrigido para usar o caminho importado
+          alt="Login Logo"
+          style={{
+            width: '150px',
+            height: '150px',
+          }}
+        />
       </Box>
 
-      <Box sx={{ textAlign: 'left', mb: 3, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginLeft: '2rem' }}>
+      <Box
+        sx={{
+          textAlign: 'left',
+          mb: 3,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+          marginLeft: '2rem',
+        }}
+      >
         <Typography
           variant="h3"
           sx={{
