@@ -111,16 +111,23 @@ const Login = () => {
         Close
       </Button>
 
-      <Box sx={{ mb: 2 }}>
-        <img
-          src={LogoImage} // Corrigido para usar o caminho importado
-          alt="Login Logo"
-          style={{
-            width: '150px',
-            height: '150px',
-          }}
-        />
-      </Box>
+      <Box
+         sx={{
+        position: 'absolute',
+        top: 0,
+    left: 0,
+    padding: '1rem', // Opcional, para dar espaçamento da borda
+  }}
+>
+  <img
+    src={LogoImage}
+    alt="Login Logo"
+    style={{
+      width: '150px',
+      height: '150px',
+    }}
+  />
+</Box>
 
       <Box
         sx={{
